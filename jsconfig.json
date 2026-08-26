@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"types": ["node"],
+		"allowJs": true,
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"target": "ES6",
+		"allowSyntheticDefaultImports": true
+	},
+	"files": []
+}
