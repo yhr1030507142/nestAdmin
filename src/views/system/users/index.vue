@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // 公共数据
 const params = ref({})
-const rules = { name: [$sdk.ruleRequiredBlur], phone: [$sdk.ruleRequiredBlur], deptId: [$sdk.ruleRequiredChange] }
+const rules = { account: [$sdk.ruleRequiredBlur], name: [$sdk.ruleRequiredBlur], phone: [$sdk.ruleRequiredBlur], deptId: [$sdk.ruleRequiredChange] }
 
 /** -- 人员 模块 -- */
 import { getList, add, update, del, resetPassword } from './api'
@@ -220,6 +220,7 @@ function isAdmin(row) {
               <span v-else>-</span>
             </template>
           </el-table-column>
+          <el-table-column label="账号" prop="account" :show-overflow-tooltip="true" />
           <el-table-column label="姓名" prop="name" :show-overflow-tooltip="true" />
           <el-table-column label="部门" prop="dept" width="150">
             <template #default="{ row }">
@@ -250,6 +251,7 @@ function isAdmin(row) {
         width="500"
         @confirm="$refs.userDialogRef.confirm(add, () => $refs.rctRef.getList(), update)">
         <template #form="{ form }">
+          <BaInput v-model="form.account" prop="account" label="账号" maxlength="30"></BaInput>
           <BaInput v-model="form.name" prop="name" label="名称" maxlength="30"></BaInput>
           <!-- show-password -->
           <BaInput v-model="form.phone" prop="phone" label="手机" maxlength="11"></BaInput>

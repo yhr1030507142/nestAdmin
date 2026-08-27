@@ -31,16 +31,15 @@ export const useUserStore = defineStore('user', {
       this.roles = []
       this.permissions = []
 
-      // removeToken()
       return logout()
         .then(() => {
           removeToken()
           location.href = window.sysConfig.BASE_URL
         })
-        .catch((error) => {
-          reject(error)
+        .catch(() => {
+          removeToken()
+          location.href = window.sysConfig.BASE_URL
         })
-      location.href = window.sysConfig.BASE_URL
     },
   },
 })

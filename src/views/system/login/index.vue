@@ -48,13 +48,13 @@
       </template>
     </el-form>
 
-    <el-divider><span class="" style="color: var(--FontBlack7)">其他方式登录</span></el-divider>
+    <!-- <el-divider><span class="" style="color: var(--FontBlack7)">其他方式登录</span></el-divider>
     <div class="third pointer" @click="$sdk.demoDisabled()">
       <SvgIcon icon="wechat" style="color: #05e06d" />
       <SvgIcon icon="gitee" />
       <SvgIcon icon="phone" />
       <SvgIcon icon="github" style="color: var(--FontBlack)" />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -72,7 +72,7 @@ const loginType = ref('account')
 const redirect = ref()
 const formRef = ref()
 const form = ref({
-  account: 'NestAdmin',
+  account: 'admin',
   password: '123456',
   rememberMe: false,
   code: '',

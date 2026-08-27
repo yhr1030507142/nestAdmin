@@ -30,18 +30,6 @@ let devRoutes = []
 if (process.env.NODE_ENV === 'development') {
   devRoutes = [
     {
-      path: '/dev',
-      component: Layout,
-      redirect: '/menus',
-      meta: { title: '开发菜单' },
-      children: [
-        {
-          path: '/menus',
-          component: () => import('@/views/system/menus'),
-        },
-      ],
-    },
-    {
       path: '/trash',
       component: Layout,
       redirect: '/trash/stories',
@@ -114,8 +102,8 @@ export const constantRoutes = [
     path: '/401',
     component: () => import('@/views/system/error/401'),
     isHidden: true,
-  },
-  ...devRoutes,
+  }
+  // ...devRoutes
 ]
 
 import { getLoginUserMenus } from '@/views/system/roles/api'

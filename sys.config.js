@@ -3,7 +3,7 @@ import { useDark } from '@vueuse/core'
 // 环境变量
 const envs = {
   development: {
-    DOMAIN: 'http://localhost:3000', // 站点域名，会根据此处域名判断应用环境
+    DOMAIN: 'http://localhost:1994', // 站点域名，会根据此处域名判断应用环境
     BASE_URL: '/', // 页面路由基础路径 /*/*/，eg：/a/，不支持 ’./‘形式的路径
     BASE_API: 'http://localhost:3000/api', // 接口基础路径
   },
@@ -32,10 +32,10 @@ useDark().value
 // 配置项
 export let config = {
   ...env,
-  SYSTEM_NAME: 'Nestjs Admin', // 系统简称
-  SYSTEM_SLOGAN: '基于 Nestjs + Vue3 的前后端分离快速开发框架', // 系统标语
-  SYSTEM_NAME_ALL: 'Nestjs Admin -- 基于 Nestjs + Vue3 的前后端分离快速开发框架', // 系统全称，浏览器标题
-  COPYRIGHT: 'Copyright © 2024 ~ present Nestjs Admin All Rights Reserved.', // 版权信息
+  SYSTEM_NAME: 'trashAdmin', // 系统简称
+  SYSTEM_SLOGAN: 'So what do u want to do?', // 系统标语
+  SYSTEM_NAME_ALL: '后台管理系统', // 系统全称，浏览器标题
+  COPYRIGHT: 'Copyright © 2026 ~ present  Admin All Rights Reserved.', // 版权信息
   // LOGO_DARK: BASE_URL + 'static/logo.svg', // 深色logo
   // LOGO_LIGHT: BASE_URL + 'static/logo.svg', // 淡色logo
   LOGO: `${BASE_URL}static/logo.svg`,
